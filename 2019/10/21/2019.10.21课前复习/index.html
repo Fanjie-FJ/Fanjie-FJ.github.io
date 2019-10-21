@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>实用操作系统笔记 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="2019.10.21课前复习 1.页式管理（无虚拟内存）核心特点：进程分页、内存分帧、页帧等大小 进程加载特点：全部加载、不连续加载 页表：存储页和帧之间的对应关系，用于表示进程的页存储在具体内存中的某个帧，页号没有在页表项中，而是隐式存储在页表数组下标中 帧号=页表【页号】.帧号 逻辑地址=页号+页内偏移量 物理地址=帧号+帧内偏移量 帧内偏移量=页内偏移量（直接拷贝、特殊加法） 地址映射=》输">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实用操作系统笔记">
+<meta property="og:url" content="http://yoursite.com/2019/10/21/2019.10.21课前复习/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="2019.10.21课前复习 1.页式管理（无虚拟内存）核心特点：进程分页、内存分帧、页帧等大小 进程加载特点：全部加载、不连续加载 页表：存储页和帧之间的对应关系，用于表示进程的页存储在具体内存中的某个帧，页号没有在页表项中，而是隐式存储在页表数组下标中 帧号=页表【页号】.帧号 逻辑地址=页号+页内偏移量 物理地址=帧号+帧内偏移量 帧内偏移量=页内偏移量（直接拷贝、特殊加法） 地址映射=》输">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-10-21T07:37:13.481Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="实用操作系统笔记">
+<meta name="twitter:description" content="2019.10.21课前复习 1.页式管理（无虚拟内存）核心特点：进程分页、内存分帧、页帧等大小 进程加载特点：全部加载、不连续加载 页表：存储页和帧之间的对应关系，用于表示进程的页存储在具体内存中的某个帧，页号没有在页表项中，而是隐式存储在页表数组下标中 帧号=页表【页号】.帧号 逻辑地址=页号+页内偏移量 物理地址=帧号+帧内偏移量 帧内偏移量=页内偏移量（直接拷贝、特殊加法） 地址映射=》输">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2019.10.21课前复习" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/21/2019.10.21课前复习/" class="article-date">
+  <time datetime="2019-10-21T07:30:37.000Z" itemprop="datePublished">2019-10-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      实用操作系统笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>2019.10.21课前复习</strong></p>
+<h3 id="1-页式管理（无虚拟内存）"><a href="#1-页式管理（无虚拟内存）" class="headerlink" title="1.页式管理（无虚拟内存）"></a>1.页式管理（无虚拟内存）</h3><p><strong>核心特点：</strong>进程分页、内存分帧、页帧等大小</p>
+<p><strong>进程加载特点：</strong>全部加载、不连续加载</p>
+<p><strong>页表：</strong>存储页和帧之间的对应关系，用于表示进程的页存储在具体内存中的某个帧，页号没有在页表项中，而是隐式存储在页表数组下标中</p>
+<p><strong>帧号=页表【页号】.帧号</strong></p>
+<p><em>逻辑地址=页号+页内偏移量</em></p>
+<p><em>物理地址=帧号+帧内偏移量</em></p>
+<p><em>帧内偏移量=页内偏移量（直接拷贝、特殊加法）</em></p>
+<p>地址映射=》输入虚拟地址，输出物理地址</p>
+<p><strong>形成物理地址后需要进行合法性判断，使用比较器</strong></p>
+<h3 id="2-段式管理（无虚拟内存）"><a href="#2-段式管理（无虚拟内存）" class="headerlink" title="2.段式管理（无虚拟内存）"></a>2.段式管理（无虚拟内存）</h3><p>进程按照逻辑组织分段，大小不定</p>
+<p>段存在哪个内存块中？</p>
+<p>答：内存块-》起始地址+长度-》内存中的一个连续空间</p>
+<p><strong>段表：</strong>存储段号所在的内存起始地址和对应长度，段号隐式存储在段表数组下标中</p>
+<p><em>虚拟地址=段号+段内偏移量<br>物理地址=没有位数上的特定分解=》段首地址+段内偏移量</em></p>
+<h3 id="3-碎片（无虚拟内存）"><a href="#3-碎片（无虚拟内存）" class="headerlink" title="3.碎片（无虚拟内存）"></a>3.碎片（无虚拟内存）</h3><p><strong>内部碎片=》页式=》每个进程1/2个页大小<br>外部碎片=》段式=》压缩整理技术=》大的空闲空间=》再使用</strong></p>
+<h3 id="4-虚拟内存"><a href="#4-虚拟内存" class="headerlink" title="4.虚拟内存"></a>4.虚拟内存</h3><p><strong>为什么可以使用虚拟内存？</strong></p>
+<p>答：</p>
+<p>1、    程序要加载到内存中才能运行。<br>2、    在一定的时间内，程序值运行某个部分（只有一部分在运行）<br>3、    运动的部分放内存，不运行的部分放硬盘（虚拟内存）</p>
+<p>4、    当要运行不在内存的部分关系时，加载到内存<br>5、    内存满，把不运行的部分替换到硬盘=》可以用虚拟内存来运行程序</p>
+<p>6、    如果换入换出操作太过频繁，系统会产生抖动（系统抖动就是系统大部分时间都用于换入换出操作，没有时间执行用户程序）<br>=》使用虚拟内存的时候可能会出现问题</p>
+<p><strong><em>1~5点表示可以使用虚拟内存的条件，第6点表示使用虚拟内存的缺点</em></strong></p>
+<h3 id="5-局部性原理"><a href="#5-局部性原理" class="headerlink" title="5.局部性原理"></a>5.局部性原理</h3><p><strong>空间局部性原理：</strong>程序执行有集簇性倾向=》加载快到内存后块内的其他程序也可以在不久将来执行</p>
+<p><strong>时间局部性原理：</strong>正在执行的程序在不久的将来会再被执行=》换出一块在最久的将来最不可能使用的快（未来事件，无法实现）=》用历史来预测未来=》使得换出的块，尽可能不马上换入</p>
+<p><strong><em>如何避免/解决系统抖动？<br>首先回答什么是系统抖动，产生原因是什么（换入换出操作太频繁，（调度算法不好））<br>=》局部性原理=》换出的块不会立即换入</em></strong></p>
+<h3 id="6-页式管理（有虚拟内存）"><a href="#6-页式管理（有虚拟内存）" class="headerlink" title="6.页式管理（有虚拟内存）"></a>6.页式管理（有虚拟内存）</h3><p>页表项中多了两个位：P、M<br><strong>P：存在位（要访问的页是否在内存中）</strong><br>P=1：在内存中，正常访问<br>P=0：不在内存中，发出缺页中断（页错误），OS发IO请求，<strong>进程=》阻塞状态</strong>，IO请求完成，P被设置为1，且页表项中的帧号信息也被设置，<strong>进程=》就绪</strong>，再次调度（获得CPU控制权），P=1</p>
+<p><strong>M：修改位（当次页加载到内存开始，到目前为止，页面是否被修改过）</strong><br>M=1：修改过，表明内存中帧的内容和硬盘上页的内容不一致，则需要IO操作<br>M=0：没有被修改过，在不需要回写，直接替换</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/10/21/2019.10.21课前复习/" data-id="ck203xff00000w4vz7y2enxwz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/18/test/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">我的最新测试</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/21/2019.10.21课前复习/">实用操作系统笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/18/test/">我的最新测试</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/18/my-new-test/">my_new_test</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/28/我的第一篇文章/">我的第一篇文章</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/28/我的第一篇博客/">测试</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
