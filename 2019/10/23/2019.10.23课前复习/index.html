@@ -5,21 +5,19 @@
   
 
   
-  <title>Hexo</title>
+  <title>实用操作系统笔记（三） | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title: 实用操作系统笔记(三)date: 2019-10-23 17:20:37 tags:10.23课前复习 1.页式管理系统  地址映射有两条路径： （1）页表    P=1    虚拟地址-》页号-》页表（10ms）-》页表项-》帧号-》物理地址-》内存访问（10ms）    总共55ms，概率为5% （2）缺页    P=0    虚拟地址-》页号-》页表（10ms）-》页表项（P">
+  <meta name="description" content="10.23课前复习 1.页式管理系统参考题目在某页式虚存储系统中，假定访问内存的时间是10ms，平均缺页中断处理时间按为25ms，平均缺页中断率为5%。(1) 试计算在该虚存储系统中，平均有效访问时间是多少?(2)使用TLB，TLB访问时间忽略不计，TLB的命中率为70%，试计算该系统中平均有效访问时间是多少? 地址映射有两条路径： （1）页表    P=1    虚拟地址-》页号-》页表（10m">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="实用操作系统笔记（三）">
 <meta property="og:url" content="http://yoursite.com/2019/10/23/2019.10.23课前复习/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="title: 实用操作系统笔记(三)date: 2019-10-23 17:20:37 tags:10.23课前复习 1.页式管理系统  地址映射有两条路径： （1）页表    P=1    虚拟地址-》页号-》页表（10ms）-》页表项-》帧号-》物理地址-》内存访问（10ms）    总共55ms，概率为5% （2）缺页    P=0    虚拟地址-》页号-》页表（10ms）-》页表项（P">
+<meta property="og:description" content="10.23课前复习 1.页式管理系统参考题目在某页式虚存储系统中，假定访问内存的时间是10ms，平均缺页中断处理时间按为25ms，平均缺页中断率为5%。(1) 试计算在该虚存储系统中，平均有效访问时间是多少?(2)使用TLB，TLB访问时间忽略不计，TLB的命中率为70%，试计算该系统中平均有效访问时间是多少? 地址映射有两条路径： （1）页表    P=1    虚拟地址-》页号-》页表（10m">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="c:/Users/fanjie/AppData/Roaming/Typora/typora-user-images/1571814505147.png">
-<meta property="og:updated_time" content="2019-10-23T09:20:20.706Z">
+<meta property="og:updated_time" content="2019-10-23T09:29:08.175Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="title: 实用操作系统笔记(三)date: 2019-10-23 17:20:37 tags:10.23课前复习 1.页式管理系统  地址映射有两条路径： （1）页表    P=1    虚拟地址-》页号-》页表（10ms）-》页表项-》帧号-》物理地址-》内存访问（10ms）    总共55ms，概率为5% （2）缺页    P=0    虚拟地址-》页号-》页表（10ms）-》页表项（P">
-<meta name="twitter:image" content="c:/Users/fanjie/AppData/Roaming/Typora/typora-user-images/1571814505147.png">
+<meta name="twitter:title" content="实用操作系统笔记（三）">
+<meta name="twitter:description" content="10.23课前复习 1.页式管理系统参考题目在某页式虚存储系统中，假定访问内存的时间是10ms，平均缺页中断处理时间按为25ms，平均缺页中断率为5%。(1) 试计算在该虚存储系统中，平均有效访问时间是多少?(2)使用TLB，TLB访问时间忽略不计，TLB的命中率为70%，试计算该系统中平均有效访问时间是多少? 地址映射有两条路径： （1）页表    P=1    虚拟地址-》页号-》页表（10m">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -69,20 +67,27 @@
         <section id="main"><article id="post-2019.10.23课前复习" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/10/23/2019.10.23课前复习/" class="article-date">
-  <time datetime="2019-10-23T09:19:54.308Z" itemprop="datePublished">2019-10-23</time>
+  <time datetime="2019-10-23T09:30:37.000Z" itemprop="datePublished">2019-10-23</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      实用操作系统笔记（三）
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>title: 实用操作系统笔记(三)<br>date: 2019-10-23 17:20:37</p>
-<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><p><strong>10.23课前复习</strong></p>
-<h3 id="1-页式管理系统"><a href="#1-页式管理系统" class="headerlink" title="1.页式管理系统"></a>1.页式管理系统</h3><img src="C:\Users\fanjie\AppData\Roaming\Typora\typora-user-images\1571814505147.png" alt="1571814505147" style="zoom:18%;">
-
+        <p><strong>10.23课前复习</strong></p>
+<h3 id="1-页式管理系统"><a href="#1-页式管理系统" class="headerlink" title="1.页式管理系统"></a>1.页式管理系统</h3><p><em>参考题目</em><br><em>在某页式虚存储系统中，假定访问内存的时间是10ms，平均缺页中断处理时间按为25ms，平均缺页中断率为5%。</em><br><em>(1) 试计算在该虚存储系统中，平均有效访问时间是多少?</em><br><em>(2)使用TLB，TLB访问时间忽略不计，TLB的命中率为70%，试计算该系统中平均有效访问时间是多少?</em></p>
 <p><strong>地址映射有两条路径：</strong></p>
 <p>（1）<strong>页表</strong>    P=1    虚拟地址-》页号-》页表（<strong>10ms</strong>）-》页表项-》帧号-》物理地址-》内存访问（<strong>10ms</strong>）    <strong><em>总共55ms，概率为5%</em></strong></p>
 <p>（2）<strong>缺页</strong>    P=0    虚拟地址-》页号-》页表（<strong>10ms</strong>）-》页表项（P=0）-》缺页中断-》进程堵塞-》OS发送IO请求、IO响应、IO完成（中断处理  <strong>25ms</strong>）-》进程就绪-》再调度-》虚拟地址-》页号-》页表（<strong>10ms</strong>）-》页表项（P=1）-》帧号-》物理地址-》内存访问（<strong>10ms</strong>）    <strong><em>总共55ms，概率为5%</em></strong></p>
@@ -108,7 +113,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/23/2019.10.23课前复习/" data-id="ck232i6g30002fkvz1x3fn65m" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/23/2019.10.23课前复习/" data-id="ck232it0l0001jovzetxg5o1m" class="article-share-link">Share</a>
       
       
     </footer>
@@ -157,7 +162,7 @@
       <ul>
         
           <li>
-            <a href="/2019/10/23/2019.10.23课前复习/">(no title)</a>
+            <a href="/2019/10/23/2019.10.23课前复习/">实用操作系统笔记（三）</a>
           </li>
         
           <li>
