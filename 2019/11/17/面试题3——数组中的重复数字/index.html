@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>剑指Offer笔记 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="面试题3——数组中的重复数字 解法一： 基本思路： 对数组进行排序，然后从头扫描一遍即可。 算法复杂度： 时间复杂度——O（nlogn）+O（n）=O（nlogn） 空间复杂度——O（1） 解法二： 基本思路： 模拟哈希表，已知长度为n的数组，且数组中的所有数字均在0~n-1之间，故哈希表的范围可以确定。扫描数组，判断数字是否已经在哈希表中，若不在，则将其加入哈希表；若在，则找到重复的数字。 算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="剑指Offer笔记">
+<meta property="og:url" content="http://yoursite.com/2019/11/17/面试题3——数组中的重复数字/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="面试题3——数组中的重复数字 解法一： 基本思路： 对数组进行排序，然后从头扫描一遍即可。 算法复杂度： 时间复杂度——O（nlogn）+O（n）=O（nlogn） 空间复杂度——O（1） 解法二： 基本思路： 模拟哈希表，已知长度为n的数组，且数组中的所有数字均在0~n-1之间，故哈希表的范围可以确定。扫描数组，判断数字是否已经在哈希表中，若不在，则将其加入哈希表；若在，则找到重复的数字。 算法">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="file:///C:/Users/fanjie/AppData/Local/Temp/msohtmlclip1/01/clip_image001.png">
+<meta property="og:updated_time" content="2019-11-17T05:42:41.626Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="剑指Offer笔记">
+<meta name="twitter:description" content="面试题3——数组中的重复数字 解法一： 基本思路： 对数组进行排序，然后从头扫描一遍即可。 算法复杂度： 时间复杂度——O（nlogn）+O（n）=O（nlogn） 空间复杂度——O（1） 解法二： 基本思路： 模拟哈希表，已知长度为n的数组，且数组中的所有数字均在0~n-1之间，故哈希表的范围可以确定。扫描数组，判断数字是否已经在哈希表中，若不在，则将其加入哈希表；若在，则找到重复的数字。 算法">
+<meta name="twitter:image" content="file:///C:/Users/fanjie/AppData/Local/Temp/msohtmlclip1/01/clip_image001.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-面试题3——数组中的重复数字" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/17/面试题3——数组中的重复数字/" class="article-date">
+  <time datetime="2019-11-17T05:45:37.000Z" itemprop="datePublished">2019-11-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      剑指Offer笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="面试题3——数组中的重复数字"><a href="#面试题3——数组中的重复数字" class="headerlink" title="面试题3——数组中的重复数字"></a>面试题3——数组中的重复数字</h3><p><img src="file:///C:/Users/fanjie/AppData/Local/Temp/msohtmlclip1/01/clip_image001.png" alt="img"></p>
+<p><strong>解法一：</strong></p>
+<p>基本思路：</p>
+<p>对数组进行排序，然后从头扫描一遍即可。</p>
+<p>算法复杂度：</p>
+<p>时间复杂度——O（nlogn）+O（n）=O（nlogn）</p>
+<p>空间复杂度——O（1）</p>
+<p><strong>解法二：</strong></p>
+<p>基本思路：</p>
+<p>模拟哈希表，已知长度为n的数组，且数组中的所有数字均在0~n-1之间，故哈希表的范围可以确定。扫描数组，判断数字是否已经在哈希表中，若不在，则将其加入哈希表；若在，则找到重复的数字。</p>
+<p>算法复杂度：</p>
+<p>时间复杂度——O（n）</p>
+<p>空间复杂度——O（n）</p>
+<p><strong>解法三：</strong></p>
+<p>基本思路：</p>
+<p>从头到尾扫描数组，当扫描到下标为i的数字，判断这个数字（用m表示）是否等于i，若m=i则无操作，扫描下一个数字；若m！=i则将m与下标为m的数字进行比较，若相等，则找到重复数字m（该数字在下标为m和i的位置都出现），若不相等，则将下标为i的数字与下标为m的数字进行交换，然后扫描下一个数字。</p>
+<p>算法复杂度：</p>
+<p>***尽管代码有两重循环，但每个数字最多需要操作两次即可找到对应位置，故整体时间复杂度为O（n）</p>
+<p>时间复杂度——O（n）</p>
+<p>空间复杂度——O（1）</p>
+<p>附上解法三关键源码：</p>
+<p><a href="https://github.com/Fanjie-FJ/CodingInterviewChinese2/blob/master/03_01_DuplicationInArray/FindDuplication.cpp" target="_blank" rel="noopener">https://github.com/Fanjie-FJ/CodingInterviewChinese2/blob/master/03_01_DuplicationInArray/FindDuplication.cpp</a></p>
+<p>注：本源码仅可输出数组中的一个重复数字，如需找到所有重复数字，需要进行改造e</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/11/17/面试题3——数组中的重复数字/" data-id="ck32kqguf00038wvzeki2gh06" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/23/2019.10.23课前复习/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">实用操作系统笔记（三）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/17/面试题3——数组中的重复数字/">剑指Offer笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/23/2019.10.23课前复习/">实用操作系统笔记（三）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/21/2019.10.21课前复习/">实用操作系统笔记（二）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/16/2019.10.16课前复习/">实用操作系统笔记（一）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
