@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>实用操作系统笔记（五） | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="2019.11.11课前复习 1.IO设备与磁盘调度IO设备差异（1）速度差异很大（2）传送的单位不一样 IO技术发展=》IO技术的发展史就是将CPU从繁重的IO工作中解脱出来的解放史 三阶段：（1）可编程IO（2）可中断IO（3）DMA 六阶段：（0）直接访问（1）可编程IO（2）中断IO（3）DMA（4）IO通道（5）IO处理器 DMA的三种方式：（1）单总线：离散/耦合（集成）（2）双总线/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实用操作系统笔记（五）">
+<meta property="og:url" content="http://yoursite.com/2019/11/11/2019.11.11课前复习/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="2019.11.11课前复习 1.IO设备与磁盘调度IO设备差异（1）速度差异很大（2）传送的单位不一样 IO技术发展=》IO技术的发展史就是将CPU从繁重的IO工作中解脱出来的解放史 三阶段：（1）可编程IO（2）可中断IO（3）DMA 六阶段：（0）直接访问（1）可编程IO（2）中断IO（3）DMA（4）IO通道（5）IO处理器 DMA的三种方式：（1）单总线：离散/耦合（集成）（2）双总线/">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-11-17T06:30:38.797Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="实用操作系统笔记（五）">
+<meta name="twitter:description" content="2019.11.11课前复习 1.IO设备与磁盘调度IO设备差异（1）速度差异很大（2）传送的单位不一样 IO技术发展=》IO技术的发展史就是将CPU从繁重的IO工作中解脱出来的解放史 三阶段：（1）可编程IO（2）可中断IO（3）DMA 六阶段：（0）直接访问（1）可编程IO（2）中断IO（3）DMA（4）IO通道（5）IO处理器 DMA的三种方式：（1）单总线：离散/耦合（集成）（2）双总线/">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2019.11.11课前复习" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/11/2019.11.11课前复习/" class="article-date">
+  <time datetime="2019-11-11T07:36:37.000Z" itemprop="datePublished">2019-11-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      实用操作系统笔记（五）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>2019.11.11课前复习</strong></p>
+<h3 id="1-IO设备与磁盘调度"><a href="#1-IO设备与磁盘调度" class="headerlink" title="1.IO设备与磁盘调度"></a>1.IO设备与磁盘调度</h3><p>IO设备差异<br>（1）速度差异很大<br>（2）传送的单位不一样</p>
+<p>IO技术发展=》IO技术的发展史就是将CPU从繁重的IO工作中解脱出来的解放史</p>
+<p>三阶段：<br>（1）可编程IO<br>（2）可中断IO<br>（3）DMA</p>
+<p>六阶段：<br>（0）直接访问<br>（1）可编程IO<br>（2）中断IO<br>（3）DMA<br>（4）IO通道<br>（5）IO处理器</p>
+<p>DMA的三种方式：<br>（1）单总线：离散/耦合（集成）<br>（2）双总线/独立总线/IO总线</p>
+<p>设计目标：效率与通用性=》屏蔽细节/提供抽象（接口）=〉提高效率/使用便利性</p>
+<p>IO组织的三种模型：<br>（1）本地<br>（2）通讯<br>（3）文件</p>
+<h3 id="2-Buffering和Cache的区别："><a href="#2-Buffering和Cache的区别：" class="headerlink" title="2.Buffering和Cache的区别："></a>2.Buffering和Cache的区别：</h3><p>缓冲区=》提前读&amp;滞后写=〉IO尽可能跟上进程（CPU）速度</p>
+<p>IO操作的一个特性：需要有源和目的地址空间（读&amp;写）        源空间《=》目的空间</p>
+<p>死锁：两个或两个以上的一组进程由于互相等待而不能继续执行的现象<br><strong>单进程死锁</strong>：<br>（1）进程发送IO请求，OS启动IO进程<br>（2）进程被挂起=》IO操作的源或目的空间不在内存中<br>（3）IO进程等待该进程被唤醒（等目的空间）<br>（4）进程等待IO进程完成IO操作=》进程 和IO进程相互等待=》死锁=》不矛盾=》本质还是两个进程的死锁</p>
+<p><strong>Buffering：</strong><br>单<br>双<br>循环<br>读：磁盘=》传送=〉内存（系统空间）=》拷贝=〉内存（用户空间）<br>写：反之<br>作用：平滑IO需求峰值<br>如果IO的需求超过IO的服务能力，那么再多的缓冲区也不能使IO与进程/CPU并驾齐驱</p>
+<p>磁盘<br>磁：小磁铁存储数据，N和S的不同指向代表0和1<br>盘：盘状结构，盘上有磁道，磁道之间有间隔，磁道中有扇区，扇区有间隔<br>内圈无磁道=》密度<br>每个磁道上有相同的山区<br>每个扇区具有相同的存储空间</p>
+<p>时间：<br>（1）寻道时间：磁头到达指定磁道所需要的时间（磁头做径向运动）<br>（2）旋转延迟：磁头到达指定扇区开始位置所需要的时间=》旋转是单向（旋转延迟=1/2圈时间）<br>（3）读写时间：存储区域（扇区）进过磁头所需要的时间（在读写的时候，磁头不动，磁盘旋转）<br>（4）平均读取时间：（1）+（2）+（3）<br>RPS：旋转定位感知<br>=》提高IO通道的利用率<br>=》提高IO设备的效率<br>在寻道和旋转延迟的时候，IO通道是空闲的，这个时间段，可以把IO通道给别的IO请求使用<br>（1）    在寻道开始的时候，释放IO通道<br>（2）    在磁头接近扇区开始位置时，尝试连接IO通道<br>（3）    连接成功，则进行数据读写<br>（4）    连接事变，多转一圈，转（2）</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/11/11/2019.11.11课前复习/" data-id="ck32mfr6g00009gvzx6yxi1os" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/11/17/面试题3——数组中的重复数字/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          剑指Offer笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/10/28/2019.10.28课前复习/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">实用操作系统笔记（四）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/17/面试题3——数组中的重复数字/">剑指Offer笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/11/2019.11.11课前复习/">实用操作系统笔记（五）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/28/2019.10.28课前复习/">实用操作系统笔记（四）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/23/2019.10.23课前复习/">实用操作系统笔记（三）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/21/2019.10.21课前复习/">实用操作系统笔记（二）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

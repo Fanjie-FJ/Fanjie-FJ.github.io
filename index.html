@@ -111,7 +111,57 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/17/面试题3——数组中的重复数字/" data-id="ck32lsvz3000208vz2isk9089" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/17/面试题3——数组中的重复数字/" data-id="ck32m7ok80001gcvzy2g8bu7x" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2019.11.11课前复习" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/11/2019.11.11课前复习/" class="article-date">
+  <time datetime="2019-11-11T07:36:37.000Z" itemprop="datePublished">2019-11-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/11/2019.11.11课前复习/">实用操作系统笔记（五）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>2019.11.11课前复习</strong></p>
+<h3 id="1-IO设备与磁盘调度"><a href="#1-IO设备与磁盘调度" class="headerlink" title="1.IO设备与磁盘调度"></a>1.IO设备与磁盘调度</h3><p>IO设备差异<br>（1）速度差异很大<br>（2）传送的单位不一样</p>
+<p>IO技术发展=》IO技术的发展史就是将CPU从繁重的IO工作中解脱出来的解放史</p>
+<p>三阶段：<br>（1）可编程IO<br>（2）可中断IO<br>（3）DMA</p>
+<p>六阶段：<br>（0）直接访问<br>（1）可编程IO<br>（2）中断IO<br>（3）DMA<br>（4）IO通道<br>（5）IO处理器</p>
+<p>DMA的三种方式：<br>（1）单总线：离散/耦合（集成）<br>（2）双总线/独立总线/IO总线</p>
+<p>设计目标：效率与通用性=》屏蔽细节/提供抽象（接口）=〉提高效率/使用便利性</p>
+<p>IO组织的三种模型：<br>（1）本地<br>（2）通讯<br>（3）文件</p>
+<h3 id="2-Buffering和Cache的区别："><a href="#2-Buffering和Cache的区别：" class="headerlink" title="2.Buffering和Cache的区别："></a>2.Buffering和Cache的区别：</h3><p>缓冲区=》提前读&amp;滞后写=〉IO尽可能跟上进程（CPU）速度</p>
+<p>IO操作的一个特性：需要有源和目的地址空间（读&amp;写）        源空间《=》目的空间</p>
+<p>死锁：两个或两个以上的一组进程由于互相等待而不能继续执行的现象<br><strong>单进程死锁</strong>：<br>（1）进程发送IO请求，OS启动IO进程<br>（2）进程被挂起=》IO操作的源或目的空间不在内存中<br>（3）IO进程等待该进程被唤醒（等目的空间）<br>（4）进程等待IO进程完成IO操作=》进程 和IO进程相互等待=》死锁=》不矛盾=》本质还是两个进程的死锁</p>
+<p><strong>Buffering：</strong><br>单<br>双<br>循环<br>读：磁盘=》传送=〉内存（系统空间）=》拷贝=〉内存（用户空间）<br>写：反之<br>作用：平滑IO需求峰值<br>如果IO的需求超过IO的服务能力，那么再多的缓冲区也不能使IO与进程/CPU并驾齐驱</p>
+<p>磁盘<br>磁：小磁铁存储数据，N和S的不同指向代表0和1<br>盘：盘状结构，盘上有磁道，磁道之间有间隔，磁道中有扇区，扇区有间隔<br>内圈无磁道=》密度<br>每个磁道上有相同的山区<br>每个扇区具有相同的存储空间</p>
+<p>时间：<br>（1）寻道时间：磁头到达指定磁道所需要的时间（磁头做径向运动）<br>（2）旋转延迟：磁头到达指定扇区开始位置所需要的时间=》旋转是单向（旋转延迟=1/2圈时间）<br>（3）读写时间：存储区域（扇区）进过磁头所需要的时间（在读写的时候，磁头不动，磁盘旋转）<br>（4）平均读取时间：（1）+（2）+（3）<br>RPS：旋转定位感知<br>=》提高IO通道的利用率<br>=》提高IO设备的效率<br>在寻道和旋转延迟的时候，IO通道是空闲的，这个时间段，可以把IO通道给别的IO请求使用<br>（1）    在寻道开始的时候，释放IO通道<br>（2）    在磁头接近扇区开始位置时，尝试连接IO通道<br>（3）    连接成功，则进行数据读写<br>（4）    连接事变，多转一圈，转（2）</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/11/11/2019.11.11课前复习/" data-id="ck32mfr6g00009gvzx6yxi1os" class="article-share-link">Share</a>
       
       
     </footer>
@@ -135,7 +185,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/28/2019.10.28课前复习/">实用操作系统笔记（三）</a>
+      <a class="article-title" href="/2019/10/28/2019.10.28课前复习/">实用操作系统笔记（四）</a>
     </h1>
   
 
@@ -158,7 +208,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/28/2019.10.28课前复习/" data-id="ck32m71ln0000scvz45rt483z" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/28/2019.10.28课前复习/" data-id="ck32m7okw0004gcvz7bu4qke4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -217,7 +267,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/23/2019.10.23课前复习/" data-id="ck32lsvz1000108vzjc9fysy0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/23/2019.10.23课前复习/" data-id="ck32m7okq0003gcvz5803vvh8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -280,7 +330,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/21/2019.10.21课前复习/" data-id="ck32lsvz4000308vz9kb4p19g" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/21/2019.10.21课前复习/" data-id="ck32m7okj0002gcvz501rwea8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -341,7 +391,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/16/2019.10.16课前复习/" data-id="ck32lsvyw000008vzwnfmkcsq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/16/2019.10.16课前复习/" data-id="ck32m7ojn0000gcvz106iiq7w" class="article-share-link">Share</a>
       
       
     </footer>
@@ -386,7 +436,11 @@
           </li>
         
           <li>
-            <a href="/2019/10/28/2019.10.28课前复习/">实用操作系统笔记（三）</a>
+            <a href="/2019/11/11/2019.11.11课前复习/">实用操作系统笔记（五）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/28/2019.10.28课前复习/">实用操作系统笔记（四）</a>
           </li>
         
           <li>
@@ -395,10 +449,6 @@
         
           <li>
             <a href="/2019/10/21/2019.10.21课前复习/">实用操作系统笔记（二）</a>
-          </li>
-        
-          <li>
-            <a href="/2019/10/16/2019.10.16课前复习/">实用操作系统笔记（一）</a>
           </li>
         
       </ul>
